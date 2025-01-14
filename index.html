@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Ticket</title>
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+    *{
+        font-family: "Raleway", serif;
+    }
+    .content{
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+</head>
+<body >
+
+    <header class="container mx-auto mt-6">
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Description</a></li>
+                    <li><a>Search</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-2xl font-extrabold text-[#030712]">Go Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal text-lg px-1 text-[#030712B3] font-semibold gap-5">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Description</a></li>
+                    <li><a>Search</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn text-[#1DD100] bg-[#1cd10017] border-2 border-[#1cd1008a]">Bus <img src="images/bus-icon.png" alt=""></a>
+                 
+                </div>
+              </div>
+        </nav>
+
+        <!-- bennar section -->
+        <div class="bennar container mx-auto p-1 mt-5 relative ">
+            <img class="mx-auto w-full md:h-auto h-60" src="images/banner.png" alt="Banner">
+            <div class="absolute text-center p-2 w-full content top-1/2 left-1/2">
+              <h1 class=" lg:text-6xl md:text-3xl text-3xl font-bold text-white">End-to-End Travel with</h1>
+              <h1 class="lg:text-6xl md:text-3xl text-3xl font-bold text-[#1cd100]">P Paribahan</h1>
+              <p class=" md:text-xl  md:mt-4 text-white max-w-2xl text-sm my-auto mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+              <button class="btn p-3 rounded-lg bg-[#1cd100f6] md:text-lg md:mt-4 text-xs  mt-1 border-none">Buy Tickets</button>
+            </div>
+          </div>
+
+          <div class="md:-mt-12 p-3 ">
+            <div class="cards md:flex justify-center gap-12">
+
+                <div class=" flex gap-2 border-b-4  z-10 rounded-xl bg-white border-[#1cd100d3] p-8">
+                   <div>
+                     <img src="images/people.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="sm:text-3xl text-2xl font-bold">500K+</h1>
+                        <p>Registered users</p>
+                    </div>
+
+                </div>
+                <div class=" flex gap-2 border-b-4  z-10 bg-white rounded-xl border-[#1cd100d3] p-8">
+                   <div> 
+                     <img src="images/ticket-cupon.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="sm:text-3xl text-2xl font-bold">1.7 lacks</h1>
+                        <p>Tickets sold</p>
+                    </div>
+
+                </div>
+                <div class=" flex gap-2 border-b-4  bg-white z-10 rounded-xl border-[#1cd100d3] p-8">
+                   <div>
+                     <img src="images/stoppage.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="sm:text-3xl text-2xl font-bold">80K+</h1>
+                        <p>Rental partners</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+          </div>
+    </header>
+<main class="mb-11">
+<!-- Best offers section -->
+ <section class="md:mt-40 mt-20 md:px-28 lg:px-2 mx-auto">
+    <h1 class="text-3xl font-bold text-center">Best offers for you</h1>
+    <div class="coupon-cards flex flex-col lg:flex-row justify-center gap-8 mt-8 p-1">
+      <!-- card 1 -->
+        <div class="coupon-card inline-flex  items-center justify-evenly md:gap-5 lg:gap-8 bg-[#FFBF0F] md:px-14 rounded-2xl">
+            <div class="offer p-2  ">
+                <h1 class="md:text-4xl font-extrabold text-left text-xl sm:text-3xl">15% OFF</h1>
+                <p class="font-semibold">on your next purchase</p>
+                <p class="text-[#777]">on your next purchase</p>
+            </div>
+            <img class="w-8 sm:w-auto" src="images/cupon-devider.png" alt="">
+            <div class="offer text-center">
+                <h1 class="md:text-4xl font-extrabold text-xl sm:text-3xl">NEW15     . .. .</h1>
+    
+                <p class="mt-2 md:text-lg text-[#777]">Coupon Code</p>
+            </div>
+        </div>
+        <!-- card  2 -->
+        <div class="coupon-card inline-flex  items-center justify-evenly md:gap-5 lg:gap-8 bg-[#F78C9C] md:px-14 rounded-2xl">
+          <div class="offer p-2 ">
+              <h1 class="md:text-4xl font-extrabold text-left text-xl sm:text-3xl">20% OFF</h1>
+              <p class="font-semibold">on your next purchase</p>
+              <p class="text-[#777]">on your next purchase</p>
+          </div>
+          <img class="w-8 sm:w-auto" src="images/cupon-devider.png" alt="">
+          <div class="offer text-center ">
+              <h1 class="md:text-4xl font-extrabold text-xl sm:text-3xl">Couple 20</h1>
+  
+              <p class="mt-2 md:text-lg  text-[#777]">Coupon Code</p>
+          </div>
+      </div>
+
+
+       
+
+
+    </div>
+ </section>
+
+
+
+
+
+
+</main>
+
+   
+
+
+
+
+
+
+
+</body>
+
+</html>
