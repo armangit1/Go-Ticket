@@ -2,171 +2,599 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go Ticket</title>
-    <!-- daisy ui -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- font google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<style>
-    *{
-        font-family: "Raleway", serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go Ticket</title>
+  <!-- daisy ui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- font google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      font-family: "Raleway", serif;
     }
-    .content{
-        transform: translate(-50%, -50%);
+
+    .content {
+      transform: translate(-50%, -50%);
     }
-</style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 
 </head>
-<body >
 
-    <header class="container mx-auto mt-6">
-        <nav>
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 6h16M4 12h8m-8 6h16" />
-                      </svg>
-                    </div>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Description</a></li>
-                    <li><a>Search</a></li>
-                    </ul>
-                  </div>
-                  <a class="btn btn-ghost text-2xl font-extrabold text-[#030712]">Go Ticket</a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal text-lg px-1 text-[#030712B3] font-semibold gap-5">
-                    <li><a>Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Description</a></li>
-                    <li><a>Search</a></li>
-                  </ul>
-                </div>
-                <div class="navbar-end">
-                  <a class="btn text-[#1DD100] bg-[#1cd10017] border-2 border-[#1cd1008a]">Bus <img src="images/bus-icon.png" alt=""></a>
-                 
-                </div>
-              </div>
-        </nav>
+<body class="bg-white">
 
-        <!-- bennar section -->
-        <div class="bennar container mx-auto p-1 mt-5 relative ">
-            <img class="mx-auto w-full sm:h-auto h-60" src="images/banner.png" alt="Banner">
-            <div class="absolute text-center p-2 w-full content top-1/2 left-1/2">
-              <h1 class=" lg:text-6xl md:text-3xl text-3xl font-bold text-white">End-to-End Travel with</h1>
-              <h1 class="lg:text-6xl md:text-3xl text-3xl font-bold text-[#1cd100]">P Paribahan</h1>
-              <p class=" md:text-xl  md:mt-4 text-white max-w-2xl text-sm my-auto mx-auto">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.</p>
-              <button class="btn p-3 rounded-lg bg-[#1cd100f6] md:text-lg md:mt-4 text-xs  mt-1 border-none">Buy Tickets</button>
+  <header class="container mx-auto mt-6">
+    <nav>
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
             </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Description</a></li>
+              <li><a>Search</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-2xl font-extrabold text-[#030712]">Go Ticket</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal text-lg px-1 text-[#030712B3] font-semibold gap-5">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Description</a></li>
+            <li><a>Search</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <a href="#ticket-section" class="btn text-[#1DD100] bg-[#1cd10017] border-2 border-[#1cd1008a]">Bus <img
+              src="images/bus-icon.png" alt=""></a>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- bennar section -->
+    <div class="bennar container mx-auto p-1 mt-5 relative ">
+      <img class="mx-auto w-full sm:h-auto h-60" src="images/banner.png" alt="Banner">
+      <div class="absolute text-center p-2 w-full content top-1/2 left-1/2">
+        <h1 class=" lg:text-6xl md:text-3xl text-3xl font-bold text-white">End-to-End Travel with</h1>
+        <h1 class="lg:text-6xl md:text-3xl text-3xl font-bold text-[#1cd100]">P Paribahan</h1>
+        <p class=" md:text-xl  md:mt-4 text-white max-w-2xl text-sm my-auto mx-auto">Yes, you can run unit tests and
+          view the results directly within the app. The integrated testing features allow for a streamlined.</p>
+        <button class="btn p-3 rounded-lg bg-[#1cd100f6] md:text-lg md:mt-4 text-xs  mt-1 border-none">Buy
+          Tickets</button>
+      </div>
+    </div>
+
+    <div class="md:-mt-12 p-3 ">
+      <div class="cards md:flex justify-center gap-12">
+
+        <div class=" flex gap-2 border-b-4  z-10 rounded-xl bg-white border-[#1cd100d3] p-4 sm:p-8">
+          <div>
+            <img src="images/people.png" alt="">
+          </div>
+          <div>
+            <h1 class="sm:text-4xl text-2xl font-bold">500K+</h1>
+            <p>Registered users</p>
           </div>
 
-          <div class="md:-mt-12 p-3 ">
-            <div class="cards md:flex justify-center gap-12">
-
-                <div class=" flex gap-2 border-b-4  z-10 rounded-xl bg-white border-[#1cd100d3] p-4 sm:p-8">
-                   <div>
-                     <img src="images/people.png" alt="">
-                    </div>
-                    <div>
-                        <h1 class="sm:text-3xl text-2xl font-bold">500K+</h1>
-                        <p>Registered users</p>
-                    </div>
-
-                </div>
-                <div class=" flex gap-2 border-b-4  z-10 bg-white rounded-xl border-[#1cd100d3] p-4 sm:p-8">
-                   <div> 
-                     <img src="images/ticket-cupon.png" alt="">
-                    </div>
-                    <div>
-                        <h1 class="sm:text-3xl text-2xl font-bold">1.7 lacks</h1>
-                        <p>Tickets sold</p>
-                    </div>
-
-                </div>
-                <div class=" flex gap-2 border-b-4  bg-white z-10 rounded-xl border-[#1cd100d3] p-4 sm:p-8">
-                   <div>
-                     <img src="images/stoppage.png" alt="">
-                    </div>
-                    <div>
-                        <h1 class="sm:text-3xl text-2xl font-bold">80K+</h1>
-                        <p>Rental partners</p>
-                    </div>
-
-                </div>
-
-            </div>
-
+        </div>
+        <div class=" flex gap-2 border-b-4  z-10 bg-white rounded-xl border-[#1cd100d3] p-4 sm:p-8">
+          <div>
+            <img src="images/ticket-cupon.png" alt="">
           </div>
-    </header>
-<main class="mb-11">
-<!-- Best offers section -->
- <section class="md:mt-40 mt-14 md:px-28 lg:px-2 mx-auto">
-    <h1 class="sm:text-3xl text-2xl font-bold text-center">Best offers for you</h1>
-    <div class="coupon-cards flex flex-col lg:flex-row justify-center gap-8 mt-8 p-1">
-      <!-- card 1 -->
-        <div class="coupon-card inline-flex  items-center justify-evenly md:gap-5 lg:gap-8 bg-[#FFBF0F] md:px-14 rounded-2xl">
-            <div class="offer p-2  ">
-                <h1 class="md:text-4xl font-extrabold text-left text-xl sm:text-3xl">15% OFF</h1>
-                <p class="font-semibold">on your next purchase</p>
-                <p class="text-[#777]">on your next purchase</p>
-            </div>
-            <img class="w-8 sm:w-auto" src="images/cupon-devider.png" alt="">
-            <div class="offer text-center">
-                <h1 class="md:text-4xl font-extrabold text-xl sm:text-3xl">NEW15     . .. .</h1>
-    
-                <p class="mt-2 md:text-lg text-[#777]">Coupon Code</p>
-            </div>
+          <div>
+            <h1 class="sm:text-4xl text-2xl font-bold">1.7 lacks</h1>
+            <p>Tickets sold</p>
+          </div>
+
+        </div>
+        <div class=" flex gap-2 border-b-4  bg-white z-10 rounded-xl border-[#1cd100d3] p-4 sm:p-8">
+          <div>
+            <img src="images/stoppage.png" alt="">
+          </div>
+          <div>
+            <h1 class="sm:text-4xl text-2xl font-bold">80K+</h1>
+            <p>Rental partners</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+  <main class="">
+    <!-- Best offers section -->
+    <section class="md:mt-40 mt-14 md:px-28 lg:px-2 mx-auto">
+      <h1 class="sm:text-5xl text-2xl font-bold text-center">Best offers for you</h1>
+      <div class="coupon-cards flex flex-col lg:flex-row justify-center gap-8 mt-14 p-1">
+        <!-- card 1 -->
+        <div
+          class="coupon-card inline-flex  items-center justify-evenly md:gap-5 lg:gap-8 bg-[#FFBF0F] md:px-14 rounded-2xl">
+          <div class="offer p-2  ">
+            <h1 class="md:text-4xl font-extrabold text-left text-xl sm:text-3xl">15% OFF</h1>
+            <p class="font-semibold">on your next purchase</p>
+            <p class="text-[#777]">on your next purchase</p>
+          </div>
+          <img class="w-8 sm:w-auto" src="images/cupon-devider.png" alt="">
+          <div class="offer text-center">
+            <h1 class="md:text-4xl font-extrabold text-xl sm:text-3xl px-4">NEW15</h1>
+
+            <p class="mt-2 md:text-lg text-[#777]">Coupon Code</p>
+          </div>
         </div>
         <!-- card  2 -->
-        <div class="coupon-card inline-flex  items-center justify-evenly md:gap-5 lg:gap-8 bg-[#F78C9C] md:px-14 rounded-2xl">
+        <div
+          class="coupon-card inline-flex  items-center justify-evenly md:gap-5 lg:gap-8 bg-[#F78C9C] md:px-14 rounded-2xl">
           <div class="offer p-2 ">
-              <h1 class="md:text-4xl font-extrabold text-left text-xl sm:text-3xl">20% OFF</h1>
-              <p class="font-semibold">on your next purchase</p>
-              <p class="text-[#777]">on your next purchase</p>
+            <h1 class="md:text-4xl font-extrabold text-left text-xl sm:text-3xl">20% OFF</h1>
+            <p class="font-semibold">on your next purchase</p>
+            <p class="text-[#777]">on your next purchase</p>
           </div>
           <img class="w-8 sm:w-auto" src="images/cupon-devider.png" alt="">
           <div class="offer text-center ">
-              <h1 class="md:text-4xl font-extrabold text-xl sm:text-3xl">Couple 20</h1>
-  
-              <p class="mt-2 md:text-lg  text-[#777]">Coupon Code</p>
+            <h1 class="md:text-4xl font-extrabold text-xl sm:text-3xl">Couple 20</h1>
+
+            <p class="mt-2 md:text-lg  text-[#777]">Coupon Code</p>
           </div>
+        </div>
+      </div>
+      <div class="flex justify-center md:mt-20 mt-10"><a class="btn text-[#1DD100]  border-2 border-[#1cd1008a]">See All
+          Offers</a></div>
+    </section>
+
+
+    <!-- ticket section -->
+    <section id="ticket-section"
+      class="border-t-4 md:mt-32 mt-10 border-[#1cd100d3] md:rounded-t-[70px] rounded-t-[50px]  bg-[#F7F8F8]">
+
+      <h1 class="sm:text-5xl text-2xl font-bold text-center md:mt-36 mt-16">P.H Paribahan</h1>
+      <p class=" md:text-xl  md:mt-4 text-[#030712CC] text-center max-w-2xl text-sm my-auto mx-auto">Yes, you can run
+        unit tests and view the results directly within the app. The integrated testing features allow for a
+        streamlined.</p>
+
+      <!-- ticket option -->
+      <div class=" mx-auto md:mt-16 mt-7 2xl:px-40 md:p-10 p-5">
+        <div class="coupon-card md:flex  items-center justify-evenly md:gap-5 lg:gap-8 bg-white lg:px-14 rounded-2xl">
+          <!-- == -->
+          <div class="offer p-2 flex-1 ">
+
+            <div class="sm:flex items-center w-full justify-between ">
+              <div class="flex items-center gap-3">
+                <div>
+                  <img src="images/bus-logo.png" alt="">
+                </div>
+                <div>
+                  <h1 class="xl:text-4xl font-extrabold text-xl sm:text-3xl md:text-xl">Greenline Paribahan</h1>
+                  <p class=" md:text-lg text-[#030712CC]  max-w-2xl text-sm my-auto mx-auto"> Coach-009-WEB !
+                    AC_Business</p>
+                </div>
+              </div>
+
+              <div class="flex justify-end mt-3 sm:mt-0">
+                <a class="btn text-[#1DD100] bg-[#1cd10017] border-2  border-[#1cd1008a]"><img
+                    src="images/seat-green.png" alt="">40 Seats left</a>
+
+              </div>
+            </div>
+            <div class="bg-[#F7F8F8] p-8 rounded-xl mt-8">
+              <div class="flex justify-between">
+                <p class=" md:text-xl text-[#030712CC]  max-w-2xl text-sm my-auto "> Route</p>
+                <p class=" md:text-xl font-bold text-[#030712CC]  max-w-2xl text-sm my-auto "> Dhaka - Sylhet</p>
+
+              </div>
+              <div class="border-dotted border-2 my-5">
+
+              </div>
+              <div class="flex justify-between">
+                <p class=" md:text-xl text-[#030712CC]  max-w-2xl text-sm my-auto "> Departure Time</p>
+                <p class=" md:text-xl text-[#030712CC] font-bold max-w-2xl text-sm my-auto "> 9:00 PM</p>
+
+              </div>
+              <div class="border-dotted border-2 my-5">
+
+              </div>
+              <div class="md:flex justify-between">
+
+                <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm bg-[#EBECED] lg:p-3 p-2 rounded-md"> Boarding
+                  Point - Laxmipur</p>
+                <p class=" xl:text-lg text-[#030712CC] my-2 md:my-0 max-w-2xl text-sm  bg-[#EBECED] p-3 rounded-md">
+                  Dropping Point - Bogura</p>
+                <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm  bg-[#EBECED] p-3 rounded-md"> Est. Time - 11
+                  Hour</p>
+
+
+              </div>
+            </div>
+
+
+          </div>
+
+          <img class=" sm:w-auto mx-auto w-auto h-auto  my-auto hidden md:block " src="images/info-devider.png" alt="">
+
+
+
+          <div class="offer text-center p-5 ">
+            <img class="mx-auto" src="images/fare.png" alt="">
+            <h1 class="md:text-3xl font-extrabold text-xl lg:my-4 md:text-3xl ">550 Taka</h1>
+
+            <p class="mt-2 md:text-lg font-bold  text-[#777]">Per Seat</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+
+
+
+      <div class=" mx-auto md:mt-8 mt-7 2xl:px-40 md:p-10 p-5">
+        <div class="coupon-card lg:flex  justify-evenly md:gap-5 lg:gap-8 bg-white lg:px-14 rounded-2xl">
+          <!-- == -->
+          <div class="offer p-5 lg:p-8 flex-1  lg:border-r-4 border-gray-300 border-dotted ">
+
+            <div class="sm:flex items-center w-full justify-between ">
+              <h1 class="xl:text-2xl mt-2 font-bold text-xl ">Select Your Seat</h1>
+
+            </div>
+            <div class="flex items-center w-full justify-between ">
+              <div class="flex items-center gap-3">
+                <div>
+                  <img src="images/seat-gray.png" alt="">
+                </div>
+                <div>
+                  <h1 class=" text-slate-600 text-lg ">Available</h1>
+
+                </div>
+              </div>
+
+              <div class="flex justify-end mt-3 sm:mt-auto">
+                <a class="btn bg-transparent text-[#1DD100] border-none shadow-none md:text-xl "><img
+                    src="images/seat-green-filled.png" alt="">Selected</a>
+
+              </div>
+            </div>
+
+<!-- =============================================================================== -->
+
+  <div class="flex justify-end mt-5 ">
+    <img class="w-16 " src="images/tabler-icon-steering-wheel.svg" alt="">
+  </div>
+
+  <div class="flex justify-between my-2 gap-1 mt-6">
+
+    <div class="px-5 py-3">
+      <p class=" md:text-xl  text-[#030712CC]    text-sm  "> A</p>
+    </div>
+
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+
+  </div>
+  <div class="flex justify-between my-2 gap-1 mt-6">
+
+    <div class="px-5 py-3">
+      <p class=" md:text-xl  text-[#030712CC]    text-sm  "> A</p>
+    </div>
+
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+
+  </div>
+  <div class="flex justify-between my-2 gap-1 mt-6">
+
+    <div class="px-5 py-3">
+      <p class=" md:text-xl  text-[#030712CC]    text-sm  "> A</p>
+    </div>
+
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+
+  </div>
+  <div class="flex justify-between my-2 gap-1 mt-6">
+
+    <div class="px-5 py-3">
+      <p class=" md:text-xl  text-[#030712CC]    text-sm  "> A</p>
+    </div>
+
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+
+  </div>
+  <div class="flex justify-between my-2 gap-1 mt-6">
+
+    <div class="px-5 py-3">
+      <p class=" md:text-xl  text-[#030712CC]    text-sm  "> A</p>
+    </div>
+
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+
+  </div>
+  <div class="flex justify-between my-2 gap-1 mt-6">
+
+    <div class="px-5 py-3">
+      <p class=" md:text-xl  text-[#030712CC]    text-sm  "> A</p>
+    </div>
+
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+
+  </div>
+  <div class="flex justify-between my-2 gap-1 mt-6">
+
+    <div class="px-5 py-3">
+      <p class=" md:text-xl  text-[#030712CC]    text-sm  "> A</p>
+    </div>
+
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+
+  </div>
+  <div class="flex justify-between my-2 gap-1 mt-6">
+
+    <div class="px-5 py-3">
+      <p class=" md:text-xl  text-[#030712CC]    text-sm  "> A</p>
+    </div>
+
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+
+  </div>
+  <div class="flex justify-between my-2 gap-1 mt-6">
+
+    <div class="px-5 py-3">
+      <p class=" md:text-xl  text-[#030712CC]    text-sm  "> A</p>
+    </div>
+
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+
+  </div>
+  <div class="flex justify-between my-2 gap-1 mt-6">
+
+    <div class="px-5 py-3">
+      <p class=" md:text-xl  text-[#030712CC]    text-sm  "> A</p>
+    </div>
+
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+    <div class="bg-[#f4f7f7] sm:px-12 sm:py-5 px-6 py-4 rounded-xl ">
+      <p class=" md:text-xl  text-[#030712CC]   text-sm  "> A1</p>
+    </div>
+   
+
+  </div>
+
+
+ 
+ 
+ 
+
+
+
+
+<!-- =================================================================================== -->
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+          <div class="offer  ">
+            <h1 class="xl:text-2xl mt-2 font-bold text-xl border-b-2 py-4 border-dotted">Select Your Seat</h1>
+            <div>
+              <div class="flex justify-between lg:gap-24 gap-8 border-b-2 border-dotted mt-8 ">
+
+                <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm lg:p-3 p-2 font-bold rounded-md"> Seat <span
+                    class="text-white bg-[#1cd100d3] px-2 rounded-3xl">2</span></p>
+                <p class=" xl:text-lg text-[#030712CC] my-2 md:my-0 max-w-2xl text-sm font-bold p-3 rounded-md">Class
+                </p>
+                <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm  font-bold p-3 rounded-md"> Price</p>
+
+
+              </div>
+              <div class="flex justify-between lg:gap-24 gap-8  mt-2 ">
+
+                <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm lg:p-3 p-2  rounded-md"> C2 </p>
+                <p class=" xl:text-lg text-[#030712CC] my-2 md:my-0 max-w-2xl text-sm  p-3 rounded-md">Economoy</p>
+                <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm   p-3 rounded-md"> 550</p>
+
+
+              </div>
+              <div class="flex justify-between xl:gap-24 gap-8  mt-2 ">
+
+                <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm lg:p-3 p-2  rounded-md"> A4 </p>
+                <p class=" xl:text-lg text-[#030712CC] my-2 md:my-0 max-w-2xl text-sm  p-3 rounded-md">Economoy</p>
+                <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm   p-3 rounded-md"> 550</p>
+
+
+              </div>
+
+              <div class="flex justify-between lg:gap-24 gap-8 border-t-2  md:mt-8 mt-3 ">
+
+                <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm lg:p-3 p-2 font-bold rounded-md"> Total Price
+                </p>
+                <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm  font-bold p-3 rounded-md"> BDT <span class="">1100</span></p>
+
+
+              </div>
+            </div>
+
+
+          </div>
+        </div>
       </div>
 
 
-       
 
 
-    </div>
- </section>
-
+    </section>
 
 
 
+  </main>
 
 
-</main>
-
-   
 
 
 
