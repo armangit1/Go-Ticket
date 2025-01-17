@@ -36,7 +36,7 @@ document.getElementById('Apply').addEventListener('click', function () {
   }
 
   if (Applyintext == 'NEW15') {
-    document.getElementById('Apply').innerText = 'Applyed 15%'
+    document.getElementById('Apply').innerText = 'Applyed'
 
     const miampraice = getId('total').innerText;
     const pricenum = parseInt(miampraice);
@@ -45,7 +45,7 @@ document.getElementById('Apply').addEventListener('click', function () {
 
   }
   else if (Applyintext == 'Couple 20') {
-    document.getElementById('Apply').innerText = 'Applyed 20%'
+    document.getElementById('Apply').innerText = 'Applyed'
     const miampraice = getId('total').innerText;
     const pricenum = parseInt(miampraice);
     const grantedprice = pricenum - ((pricenum * 20) / 100);
@@ -69,6 +69,7 @@ const allId = ['A1', 'A2', 'A3', 'A4', 'B1', 'B2', 'B3', 'B4', 'C1', 'C2', 'C3',
 
 for (const st of allId) {
   getId(st).style.cursor = 'pointer';
+  // getId(st).classList.add('btn')
 }
 
 function chackArray() {
@@ -78,6 +79,7 @@ function chackArray() {
     getId(item).style.backgroundColor = '#f4f7f7';
 
     bookingsit();
+    getId('next').innerText = 'Next'
   
   }
 
@@ -151,4 +153,7 @@ function showEliment(elementId) {
 
 }
 
+if(setArray.length>0){
+
+}
 

@@ -71,6 +71,20 @@ getId('A1').addEventListener('click', function () {
     });
   getId('C2').addEventListener('click', function () {
      
+    btnclick('C2')
+      
+      chackArray();
+      
+    });
+  getId('C3').addEventListener('click', function () {
+     
+    btnclick('C3')
+      
+      chackArray();
+      
+    });
+  getId('C4').addEventListener('click', function () {
+     
     btnclick('C4')
       
       chackArray();
@@ -317,3 +331,41 @@ getId('A1').addEventListener('click', function () {
       getId('set3').innerText  = setArray[2];
       getId('set4').innerText  = setArray[3];
     }
+
+
+
+    document.getElementById('passengerForm').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const name = document.getElementById('name').value.trim();
+      const number = document.getElementById('number').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+      if(setArray.length <= 0){
+        getId('next').innerText = 'No Seat Booking!'
+        return;
+      }
+
+      // Validate required fields
+      if (!name || !number) {
+        alert('Passenger Name and Phone Number are required.');
+        return;
+      }
+
+      // Validate phone number pattern
+      const phoneRegex = /^[0-9]{11}$/;
+      if (!phoneRegex.test(number)) {
+        alert('Please enter a valid 10-digit phone number.');
+        return;
+      }
+
+      // Optional: Validate email format
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+
+      window.location.href = "succes.html";
+
+    });
+
