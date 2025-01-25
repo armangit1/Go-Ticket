@@ -78,10 +78,12 @@ function chackArray() {
   for (const item of allId) {
     getId(item).style.backgroundColor = '#f4f7f7';
 
-    bookingsit();
+   
     getId('next').innerText = 'Next'
   
   }
+  bookingsit();
+
 
   getId('Apply').innerText = 'Apply'
 
@@ -96,6 +98,8 @@ function chackArray() {
   getId('gtotal').innerText = '---';
 
 }
+
+
 
 
 function getId(setId) {
@@ -157,3 +161,28 @@ if(setArray.length>0){
 
 }
 
+
+
+function bookingsit() {
+ 
+  const ticketCound = document.getElementById('ticketCound');
+  ticketCound.innerHTML = '';
+  
+  setArray.forEach(seat => {
+    console.log("seat is ", seat);
+  
+    const ticketdiv = document.createElement('div');
+    ticketdiv.classList.add('justify-between', 'xl:gap-24', 'gap-6','flex' , 'mt-2');
+  
+    ticketdiv.innerHTML = `
+        <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm  p-3  rounded-md"> ${seat} </p>
+                  <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm  p-3 rounded-md">Economoy</p>
+                  <p class=" xl:text-lg text-[#030712CC]  max-w-2xl text-sm   p-3 rounded-md"> 550</p>
+    `;
+  
+    ticketCound.appendChild(ticketdiv);
+  });
+
+ 
+
+}
